@@ -52,7 +52,7 @@ class Client implements UserInterface
      * @ORM\Column(type="string", length=180, unique=true)
      * @Assert\NotBlank(message="Ce champs ne peut être vide.")
      * @Assert\Email(message="Le format de l'email est incorrect")
-     * @Groups({"client:read","client:list"})
+     * @Groups({"client:read","client:list","client:write"})
      */
     private $email;
 
@@ -69,6 +69,7 @@ class Client implements UserInterface
      *     minMessage = "Ce champs doit avoir au moins {{ limit }} caractères.",
      *     maxMessage = "Ce champs ne doit pas dépasser {{ limit }} caractères."    
      * )
+     * @Groups({"client:write"})
      */
     private $password;
 
