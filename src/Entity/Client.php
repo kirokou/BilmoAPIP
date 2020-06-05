@@ -16,7 +16,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @UniqueEntity(fields={"email"}, message="Ce compte existe déjà.")
  * 
  * @ApiResource(
- * 
+ *     cacheHeaders={"max_age"=60, "shared_max_age"=120, "vary"={"Authorization", "Accept-Language"}},
  *     normalizationContext={
  *         "groups"={"client:read"}
  *     },

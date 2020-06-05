@@ -17,6 +17,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(fields={"reference"}, message="Ce produit existe déjà.")
  * 
  * @ApiResource(
+ *      cacheHeaders={"max_age"=60, "shared_max_age"=120, "vary"={"Authorization", "Accept-Language"}},
  *      normalizationContext={
  *         "groups"={"product:read"}
  *      },
