@@ -13,8 +13,12 @@ api_platform:
         json: ['application/merge-patch+json']
     swagger:
         versions: [3]
+        api_keys:
+             apiKey:
+                name: Authorization
+                type: header
     collection:
-            pagination:
-                enabled: true
-                client_enabled: true
-                items_per_page: 4
+        pagination:
+            enabled: true
+            client_enabled: true
+            items_per_page: 4
