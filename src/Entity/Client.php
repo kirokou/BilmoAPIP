@@ -29,7 +29,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * 
  *     collectionOperations={
  *         "GET"={
- *              "normalization_context"={"groups"={"client:list"}}
+ *              "normalization_context"={"groups"={"client:list"}},
+ *              "summary"="test de summary"
  *         },
  *         "POST",
  *     },
