@@ -17,6 +17,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * 
  * @ApiResource(
  *     cacheHeaders={"max_age"=60, "shared_max_age"=120, "vary"={"Authorization", "Accept-Language"}},
+ *     attributes={"security"="is_granted('ROLE_ADMIN')","security_message"="For Only Admins."},
+ * 
  *     normalizationContext={
  *         "groups"={"client:read"}
  *     },
