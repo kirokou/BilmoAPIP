@@ -45,3 +45,5 @@ security:
         - { path: ^/api/users, roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/api/products, roles: IS_AUTHENTICATED_FULLY }
         # - { path: ^/profile, roles: ROLE_USER }
+    role_hierarchy:
+            ROLE_ADMIN:       ROLE_USER

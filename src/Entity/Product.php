@@ -18,6 +18,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * 
  * @ApiResource(
  *      cacheHeaders={"max_age"=60, "shared_max_age"=120, "vary"={"Authorization", "Accept-Language"}},
+ *      attributes={"security"="is_granted('ROLE_USER')"},
+ * 
  *      normalizationContext={
  *         "groups"={"product:read"}
  *      },
@@ -36,8 +38,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *       itemOperations={
  * 
  *           "GET"={},
- *           "PUT"={},
- *           "DELETE"={},
+ *           "PUT"={"security"="is_granted('ROLE_ADMIN')"},
+ *           "DELETE"={"security"="is_granted('ROLE_ADMIN')"},
  *       },
  * )
  *
