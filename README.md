@@ -38,7 +38,7 @@ Seuls les clients référencés peuvent accéder aux API. Les clients de l’API
 
 ## Download or clone the repository
 
-    Git clone https://github.com/bpel/bilemo.git
+    Git clone https://github.com/kirokou/BilmoAPIP.git
 
 ## Download dependencies
     
@@ -77,4 +77,4 @@ Seuls les clients référencés peuvent accéder aux API. Les clients de l’API
     You can change your Role is data base to be ADMIN. 
 
 ## UML Diagramm.
-
+BilmoAPIP/public/diagrammes
